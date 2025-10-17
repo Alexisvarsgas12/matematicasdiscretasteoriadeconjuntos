@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría de Conjuntos - Matemáticas Discretas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fff9f9 0%, #ffecec 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #8B0000, #C2185B);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 750px;
+            margin: 12px auto 0;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            border-left: 5px solid #C2185B;
+        }
+
+        h2 {
+            color: #8B0000;
+            margin-top: 0;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid #ffe0e6;
+        }
+
+        h3 {
+            color: #C2185B;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1.2rem;
+            padding-left: 1.5rem;
+        }
+
+        .ejemplo, .curiosidad {
+            padding: 1.2rem;
+            border-radius: 10px;
+            margin: 1.3rem 0;
+        }
+
+        .ejemplo {
+            background-color: #fff0f2;
+            border-left: 4px solid #E91E63;
+        }
+
+        .curiosidad {
+            background-color: #f9f0ff;
+            border-left: 4px solid #9C27B0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            margin-top: 1.2rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .btn-cuestionario {
+            display: inline-block;
+            background: #C2185B;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn-cuestionario:hover {
+            background: #8B0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            color: #666;
+            font-size: 1rem;
+            background: #fdf6f6;
+            border-top: 1px solid #f0e0e0;
+            margin-top: 2rem;
+        }
+
+        .autor {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .escuela {
+            color: #00BCD4; /* Azul cielo */
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0.4rem 0;
+        }
+
+        .licenciatura {
+            color: #555;
+            font-style: italic;
+        }
+
+        code {
+            background-color: #ffebee;
+            padding: 3px 7px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #8B0000;
+            font-weight: bold;
+        }
+
+        .conjunto {
+            font-family: 'Cambria Math', serif;
+            font-size: 1.25em;
+            color: #C2185B;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Teoría de Conjuntos</h1>
+        <p>Un fundamento esencial en las Matemáticas Discretas</p>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h2>Introducción a la Teoría de Conjuntos</h2>
+            <p>
+                La teoría de conjuntos es la rama de las matemáticas que estudia las colecciones de objetos bien definidos, llamadas <strong>conjuntos</strong>. Fue formalizada por <strong>Georg Cantor</strong> en el siglo XIX y hoy es la base de casi toda la matemática moderna.
+            </p>
+            <p>
+                En <strong>matemáticas discretas</strong>, los conjuntos permiten modelar estructuras finitas o contables, como relaciones, funciones, grafos y lógica matemática.
+            </p>
+            <a href="file:///D:/Cuestionarioteoriadeconjuntos.html" class="btn-cuestionario">Ir al Cuestionario</a>
+        </section>
+
+        <section>
+            <h2>Notación y Conceptos Fundamentales</h2>
+            <p>Un conjunto se define listando sus elementos entre llaves:</p>
+            <div class="ejemplo">
+                <p><strong>Ejemplo:</strong> El conjunto de vocales en español:</p>
+                <p class="conjunto">V = {a, e, i, o, u}</p>
+            </div>
+
+            <h3>Conceptos clave:</h3>
+            <ul>
+                <li><strong>Pertenencia:</strong> Si <code>x</code> es un elemento de <code>A</code>, escribimos <code>x ∈ A</code>.</li>
+                <li><strong>Conjunto vacío:</strong> Denotado como <code>∅</code> o <code>{}</code>, no contiene elementos.</li>
+                <li><strong>Conjunto universal (<code>U</code>):</strong> El conjunto que contiene todos los elementos del contexto.</li>
+                <li><strong>Cardinalidad:</strong> Número de elementos en un conjunto, denotado como <code>|A|</code>.</li>
+                <li><strong>Subconjunto:</strong> <code>A ⊆ B</code> si todo elemento de <code>A</code> está en <code>B</code>.</li>
+                <li><strong>Subconjunto propio:</strong> <code>A ⊂ B</code> si <code>A ⊆ B</code> y <code>A ≠ B</code>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Operaciones con Conjuntos</h2>
+            <p>Las operaciones permiten combinar o comparar conjuntos:</p>
+            <ul>
+                <li><strong>Unión (<code>A ∪ B</code>):</strong> Elementos en <code>A</code>, en <code>B</code> o en ambos.</li>
+                <li><strong>Intersección (<code>A ∩ B</code>):</strong> Elementos comunes a ambos conjuntos.</li>
+                <li><strong>Diferencia (<code>A − B</code>):</strong> Elementos en <code>A</code> que no están en <code>B</code>.</li>
+                <li><strong>Diferencia simétrica (<code>A Δ B</code>):</strong> Elementos en <code>A</code> o <code>B</code>, pero no en ambos.</li>
+                <li><strong>Complemento (<code>A<sup>c</sup></code>):</strong> Elementos en <code>U</code> que no están en <code>A</code>.</li>
+            </ul>
+
+            <div class="ejemplo">
+                <p><strong>Ejemplo:</strong> Sean <code>A = {1, 2, 3, 4}</code>, <code>B = {3, 4, 5, 6}</code></p>
+                <ul>
+                    <li><code>A ∪ B = {1, 2, 3, 4, 5, 6}</code></li>
+                    <li><code>A ∩ B = {3, 4}</code></li>
+                    <li><code>A − B = {1, 2}</code></li>
+                    <li><code>A Δ B = {1, 2, 5, 6}</code></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Propiedades de las Operaciones</h2>
+            <p>Las operaciones con conjuntos cumplen leyes algebraicas:</p>
+            <ul>
+                <li><strong>Conmutativa:</strong> <code>A ∪ B = B ∪ A</code>, <code>A ∩ B = B ∩ A</code></li>
+                <li><strong>Asociativa:</strong> <code>(A ∪ B) ∪ C = A ∪ (B ∪ C)</code></li>
+                <li><strong>Distributiva:</strong> <code>A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)</code></li>
+                <li><strong>Leyes de De Morgan:</strong>
+                    <ul>
+                        <li><code>(A ∪ B)<sup>c</sup> = A<sup>c</sup> ∩ B<sup>c</sup></code></li>
+                        <li><code>(A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></code></li>
+                    </ul>
+                </li>
+                <li><strong>Identidad:</strong> <code>A ∪ ∅ = A</code>, <code>A ∩ U = A</code></li>
+                <li><strong>Complemento:</strong> <code>A ∪ A<sup>c</sup> = U</code>, <code>A ∩ A<sup>c</sup> = ∅</code></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Diagramas de Venn</h2>
+            <p>
+                Los <strong>diagramas de Venn</strong>, ideados por John Venn en 1880, son representaciones gráficas de conjuntos mediante círculos. Son útiles para visualizar uniones, intersecciones y complementos.
+            </p>
+            <div class="ejemplo">
+                <p>La intersección <code>A ∩ B</code> se representa como la zona superpuesta de dos círculos.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Curiosidades Históricas</h2>
+            <div class="curiosidad">
+                <p>Georg Cantor, padre de la teoría de conjuntos, enfrentó fuerte oposición en su época. Sus ideas sobre <strong>infinitos de distintos tamaños</strong> (como que hay más números reales que naturales) fueron consideradas herejías matemáticas.</p>
+                <p>Hoy, su trabajo es fundamental en análisis, topología y lógica matemática.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Aprende con un Video</h2>
+            <p>Este video explica de forma clara y visual los fundamentos de la teoría de conjuntos:</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/OGkT1K6v2uY" title="Teoría de Conjuntos - Introducción" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p><small>Fuente: Canal <em>Matemáticas profe Alex</em></small></p>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="autor">
+            <p>Elaborado por: <strong>Alexis Vargas Flores</strong></p>
+            <p class="escuela">Escuela Normal Urbana Federal "Rafael Ramírez"</p>
+            <p class="licenciatura">LEAM 501</p>
+        </div>
+        <p>Blog educativo sobre Matemáticas Discretas • &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
